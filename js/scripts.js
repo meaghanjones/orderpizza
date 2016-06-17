@@ -1,49 +1,50 @@
 
-//business logic
-var pingPongNumbers = function(input) {
-  var pingPongArray =[];
-  if ($("#number-input").val() <= 0){
+//backend
+function Pizza(toppings, size) {
+  this.toppings = toppings;
+  this.pizzaSize = size;
+}
 
-  alert("Enter a positive number greater than 0!");
-  return;
-  }
+Pizza.prototype.price = function(){
+  return this.topping + this.pizzaSize;
+}
 
-  else {
-   for (i=1; i<=input; i +=1){
 
-    if ((i%3 !=0) && (i%5 !=0)){
-      pingPongArray.push(i);
-    }
-    else if ((i%15===0)){
-    pingPongArray.push("pingpong");
+//user interface logic
+$(document).ready(function() {
 
-    }
-    else if (i%5===0){
-     pingPongArray.push("pong");
-    }
-    else if (i%3===0){
-    pingPongArray.push("ping");
-    }
 
-  }
-  return pingPongArray;
-  }
 
-  }
 
-//user interface
+// $("#add-address").click(function() {
+  //   $("#new-addresses").append('<div class="new-address">' +
+  //                               '<div class="form-group">' +
+  //                               '<label for="new-street">Street</label>' +
+  //                               '<input type="text" class="form-control new-street">' +
+  //                                '</div>' +
+  //
+  //                                '<div class="form-group">' +
+  //                                '<label for="new-city">City</label>' +
+  //                                '<input type="text" class="form-control new-city">' +
+  //                                '</div>' +
+  //
+  //                                '<div class="form-group">' +
+  //                                '<label for="new-state">State</label>' +
+  //                                '<input type="text" class="form-control new-state">' +
+  //                                '</div>' +
+  //                                '</div>');
+  // });
 
-$(document).ready( function() {
-  $("form#blank-number").submit(function(event) {
-    event.preventDefault();
-    $('#output').empty();
-  var potentialPingPong = parseInt($("#number-input").val());
-  var answer = pingPongNumbers(potentialPingPong);
+  $("form#price-calculate").submit(function() {
+    var inputtedTopping = $("input#new-first-name").val();
+    var inputtedPizzaSize = $("input#new-last-name").val();
+    var pizzaPrice = new Pizza(inputtedTopping, inputtedPizzaSize);
 
-  if (answer === undefined || answer ===null){
-    return;
-  } else {
-    $("#output").append("<li>" + answer + "</li>");
-  }
-  });
-});
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+
+    $(".contact").last().click(function() {
+      $("#show-contact").show();
+      $("#show-contact h2").text(newContact.fullName());
+
+      });
+    });
