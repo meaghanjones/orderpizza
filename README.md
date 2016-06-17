@@ -1,4 +1,4 @@
-# Ping Pong Project for Epicodus
+# Order Pizza Project for Epicodus
 
 #### This is a web application that will take choices of toppings and sizes of pizza user and return the price of their pizza.
 
