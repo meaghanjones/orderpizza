@@ -3,17 +3,22 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/jquery-2.2.4.js"></script>
     <script src="js/scripts.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Passion+One:400,700' rel='stylesheet' type='text/css'>
     <title>Order a Pizza</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Order a Pizza</h1>
+    <div class = "page-header">
+      <h1><img src="img/pizza-slice.png" alt="pizza slice" /><img src="img/pizza-slice2.png" alt="pizza slice" /><img src="img/pizza-slice.png" alt="pizza slice" /><img src="img/pizza-slice2.png" alt="pizza slice" />Order your Pizza!<img src="img/pizza-slice.png" alt="" /><img src="img/pizza-slice2.png" alt="pizza slice"/><img src="img/pizza-slice.png" alt="pizza slice" /><img src="img/pizza-slice2.png" alt="pizza slice"/></h1>
 
-      <form role="form">
-           <h3>Size</h3>
-           <div>
+</div>
+    <div class="container">
+      <form id="orderpizza" role="form">
+        <div class="row">
+        <div class="col-md-4">
+          <h3>Size</h3>
+           <div id = "size">
              <div class="radio">
                <label><input type="radio" name="pizzasizes" value="3">Small</label>
              </div>
@@ -24,16 +29,27 @@
                <label><input type="radio"  name="pizzasizes" value="5">Large</label>
              </div>
            </div>
-
-
-            <div class="checkbox">
-               <h3>Topping(s)</h3>
-               <label> <input type="checkbox" id="extracheese" value="1"> Extra Cheese</label>
-               <label> <input type="checkbox" id="pepperoni" value="2"> Pepperoni</label>
-              <label><input type="checkbox" id="coxinha" value="3"> Coxinha</label>
+         </div>
+         <div class ="col-md-4">
+            <div id = "pizzatoppings" class ="checkbox">
+              <h3>Topping(s)</h3>
+              <label> <input type="checkbox" name="type" id="extracheese" value="1"> Extra Cheese</label>
+              <label> <input type="checkbox" name="type" id="pepperoni" value="2"> Pepperoni</label>
+              <label><input type="checkbox" name="type" id="coxinha" value="3"> Coxinha</label>
             </div>
-            <button type="submit" class="btn">Calculate Price</button>
-      </form>
-    </div>
+        </div>
+        <div class ="col-md-4">
+          <p id="try-coxinha">Try our new pizza with coxinha on top! It's the best thing ever.<br>
+            <img src="img/coxinhapizza.jpg" alt="" class="coxinhapic" /></p>
+      </div>
+      </div>
+          <div id="formbutton">
+          <button type="submit" class="btn">Calculate Price</button>
+          </div>
+    </form>
+
+
+    <div id = "pizzapriceoutput"> </div>
+  </div>
   </body>
 </html>
