@@ -12,7 +12,7 @@
 
 ## Setup/Installation Requirements
 
-Follow the link :
+Follow the link : https://rawgit.com/meaghanjones/orderpizza/master/index.html
 
 
 ## Known Bugs

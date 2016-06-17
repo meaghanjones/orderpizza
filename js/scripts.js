@@ -1,14 +1,14 @@
 
 //backend
-var Pizza = function (toppings, size, price) {
-  this.toppings = toppings;
+function Pizza (size, price) {
+  // this.toppings = [];
   this.pizzaSize = size;
   this.price = price;
 }
 
-Pizza.prototype.price = function(){
-  return this.topping + this.pizzaSize;
-}
+// Pizza.prototype.price = function(){
+//   return this.toppings + this.pizzaSize;
+// }
 
 
 //user interface logic
@@ -17,16 +17,16 @@ $(document).ready(function() {
 
   $("#price-calculate").click(function() {
 
-    var toppings = $("input:checkbox:checked").foreach(function(toppings){
-          var toppingsArray = [];
-          toppingsArray.push(toppings);
-        })
+    // var toppings = $("input:checkbox:checked").foreach(function(toppings){
+    //       var toppingsArray = [];
+    //       toppingsArray.push(toppings);
+    //     })
         var size = $("#size").val();
-        var newPizza = new Pizza(toppings, size);
-        var pizzaPrice = newPizza.price();
 
+        var newPizza = new Pizza(size, price);
+        // var pizzaPrice = newPizza.price();
 
-          $("#pizzapriceoutput").append("<p>" + pizzaPrice + "</p>");
+    $("div#pizzapriceoutput").append("<p>" + size + "</p>");
     });
 
 
