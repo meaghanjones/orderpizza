@@ -14,11 +14,11 @@
 
 </div>
     <div class="container">
-      <form id="orderpizza" role="form">
+
         <div class="row">
         <div class="col-md-4">
           <h3>Size</h3>
-           <div id = "size">
+           <div>
              <div class="radio">
                <label><input type="radio" name="pizzasizes" value="3">Small</label>
              </div>
@@ -33,9 +33,9 @@
          <div class ="col-md-4">
             <div id = "pizzatoppings" class ="checkbox">
               <h3>Topping(s)</h3>
-              <label> <input type="checkbox" name="type" id="extracheese" value="1"> Extra Cheese</label>
+              <label><input type="checkbox" name="type" id="extracheese" value="1"> Extra Cheese</label>
               <label> <input type="checkbox" name="type" id="pepperoni" value="2"> Pepperoni</label>
-              <label><input type="checkbox" name="type" id="coxinha" value="3"> Coxinha</label>
+              <label><input type="checkbox" name="type" id="coxinha" value="3">Coxinha</label>
             </div>
         </div>
         <div class ="col-md-4">
@@ -44,12 +44,9 @@
       </div>
       </div>
           <div id="formbutton">
-          <button type="submit" class="btn">Calculate Price</button>
+          <button id = "price-calculate" class="btn">Calculate Price</button>
           </div>
-    </form>
 
-
-    <div id = "showprice">
       <p id= "pizzapriceoutput">
       </p>
     </div>

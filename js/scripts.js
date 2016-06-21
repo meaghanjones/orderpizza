@@ -1,14 +1,13 @@
 
 //backend
-function Pizza (size, price) {
-  // this.toppings = [];
+var Pizza = function(size, toppings) {
+  this.toppings = toppings;
   this.pizzaSize = size;
-  this.price = price;
 }
 
-// Pizza.prototype.price = function(){
-//   return this.toppings + this.pizzaSize;
-// }
+Pizza.prototype.price = function(){
+  return this.pizzaSize;
+}
 
 
 //user interface logic
@@ -16,17 +15,17 @@ function Pizza (size, price) {
 $(document).ready(function() {
 
   $("#price-calculate").click(function() {
+    var toppingsArray = [];
+    var toppings = $("input:checkbox[name=type]:checked").each(function(){
+          toppingsArray.push($(this).val());
+        });
 
-    // var toppings = $("input:checkbox:checked").foreach(function(toppings){
-    //       var toppingsArray = [];
-    //       toppingsArray.push(toppings);
-    //     })
-        var size = $("#size").val();
+    var size = $("input[name='pizzasizes']:checked").val();
 
-        var newPizza = new Pizza(size, price);
-        // var pizzaPrice = newPizza.price();
+        var newPizza = new Pizza(size, toppings);
+        var pizzaPrice = newPizza.price();
 
-    $("div#pizzapriceoutput").append("<p>" + size + "</p>");
+    $("#pizzapriceoutput").text("You owe: $" + pizzaPrice + ".");
     });
 
 
