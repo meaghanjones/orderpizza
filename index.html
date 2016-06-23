@@ -11,42 +11,39 @@
   <body>
     <div class = "page-header">
       <h1><img src="img/pizza-slice.png" alt="pizza slice" /><img src="img/pizza-slice2.png" alt="pizza slice" /><img src="img/pizza-slice.png" alt="pizza slice" /><img src="img/pizza-slice2.png" alt="pizza slice" />Order your Pizza!<img src="img/pizza-slice.png" alt="" /><img src="img/pizza-slice2.png" alt="pizza slice"/><img src="img/pizza-slice.png" alt="pizza slice" /><img src="img/pizza-slice2.png" alt="pizza slice"/></h1>
-
-</div>
+    </div>
     <div class="container">
-
-        <div class="row">
+      <div class="row">
         <div class="col-md-4">
           <h3>Size</h3>
-           <div>
-             <div class="radio">
-               <label><input type="radio" name="pizzasizes" value="3">Small</label>
-             </div>
-             <div class="radio">
-               <label><input type="radio"  name="pizzasizes" value="4">Medium</label>
-             </div>
-             <div class = "radio">
-               <label><input type="radio"  name="pizzasizes" value="5">Large</label>
-             </div>
-           </div>
-         </div>
-         <div class ="col-md-4">
+          <div class="radio">
+           <label><input type="radio" name="pizzasizes" value="3">Small</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio"  name="pizzasizes" value="4">Medium</label>
+          </div>
+          <div class = "radio">
+            <label><input type="radio"  name="pizzasizes"
+              value="5">Large</label>
+          </div>
+        </div>
+          <div class ="col-md-4">
             <div id = "pizzatoppings" class ="checkbox">
               <h3>Topping(s)</h3>
-              <label><input type="checkbox" name="type" id="extracheese" value="1"> Extra Cheese</label>
+              <label><input type="checkbox" name="type" id="extracheese"
+                value="1"> Extra Cheese</label>
               <label> <input type="checkbox" name="type" id="pepperoni" value="2"> Pepperoni</label>
               <label><input type="checkbox" name="type" id="coxinha" value="3">Coxinha</label>
             </div>
-        </div>
+          </div>
         <div class ="col-md-4">
           <p id="try-coxinha">Try our new pizza with coxinha on top! It's the best thing ever.<br>
-            <img src="img/coxinhapizza.jpg" alt="" class="coxinhapic" /></p>
+          <img src="img/coxinhapizza.jpg" alt="" class="coxinhapic" /></p>
+        </div>
       </div>
+      <div id="formbutton">
+        <button id = "price-calculate" class="btn">Calculate Price</button>
       </div>
-          <div id="formbutton">
-          <button id = "price-calculate" class="btn">Calculate Price</button>
-          </div>
-
       <p id= "pizzapriceoutput">
       </p>
     </div>
