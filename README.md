@@ -2,7 +2,7 @@
 
 #### This is a web application that will take choices of toppings and sizes of pizza user and return the price of their pizza.
 
-#### By Meaghan Jones
+#### By Meaghan Jones, June 2016
 
 ## Description
 
@@ -12,7 +12,7 @@
 
 ## Setup/Installation Requirements
 
-Follow the link : https://rawgit.com/meaghanjones/orderpizza/master/index.html
+[Follow the link to order some pizza!] (https://rawgit.com/meaghanjones/orderpizza/master/index.html)
 
 
 ## Known Bugs
